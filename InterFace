@@ -36,7 +36,7 @@ labelSec.pack()
 ciphertextvalue=Entry(root)
 ciphertextvalue.pack()
 
-decbutton=Button(root,text="Decrypt",command=submitclick_decrypt)
+decbutton=Button(root,text="Decrypt",command=click_dec)
 decbutton.pack()
 
 showResultDec=Label(root,text='Show Plaintext:')

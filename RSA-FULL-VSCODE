@@ -103,17 +103,17 @@ def click_dec():
 
 
 root=Tk()
-root.geometry("800x500")
+root.geometry("500x500")
 root.title("RSA Application")
 
-Mainlabel=Label(root, text="enter only numbers", font=('Arial',18))
+Mainlabel=Label(root, text="enter only numbers", font=('Arial',16))
 Mainlabel.pack(padx=20, pady=20)
 
 
 
    #First option: Encrytion
 
-labelOne=Label(root, text='enter plaintext', font=('Arial',16))
+labelOne=Label(root, text='enter plaintext', font=(14))
 labelOne.pack()
 
 plaintextvalue=Entry(root)
@@ -132,7 +132,7 @@ listboxEnc.pack()
 
    #Second option: Decrytion
 
-labelSec=Label(root, text='enter ciphertext', font=('Arial',16))
+labelSec=Label(root, text='enter ciphertext', font=(14))
 labelSec.pack()
 
 ciphertextvalue=Entry(root)

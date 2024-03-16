@@ -96,52 +96,60 @@ def click_dec():
 
 
 #GUI
-root=Tk()
-root.geometry("500x500")
-root.title("RSA Application")
+root = Tk()
+root.geometry("500x400")
+root.title("RSA Encryption and Decryption")
 
-Mainlabel=Label(root, text="enter only numbers", font=('Arial',16))
+Mainlabel = Label(root, text="RSA Encryption and Decryption", font=('Arial', 16))
 Mainlabel.pack(padx=20, pady=20)
 
+Sidelabel=Label(root, text="you can enter numbers only", font=('Arial',10))
+Sidelabel.pack(padx=10, pady=10)
 
 
-   #First option: Encrytion
+# Encryption Section
+enc_frame = Frame(root)
+enc_frame.pack(pady=10)
 
-labelOne=Label(root, text='enter plaintext', font=(14))
-labelOne.pack(padx=10, pady=10)
+labelOne = Label(enc_frame, text='Enter Plaintext:', font=(None, 12))
+labelOne.grid(row=0, column=0, padx=5, pady=5)
 
-plaintextvalue=Entry(root)
-plaintextvalue.pack()
+plaintextvalue = Entry(enc_frame, width=30)
+plaintextvalue.grid(row=0, column=1, padx=5, pady=5)
 
-encbutton=Button(root,text="Encrypt",command=click_en)
-encbutton.pack(padx=5, pady=5)
+encbutton = Button(enc_frame, text="Encrypt", command=click_en)
+encbutton.grid(row=0, column=2, padx=5, pady=5)
 
-showResultEnc=Label(root,text='Show Ciphertext:')
-showResultEnc.pack()
+# Decryption Section
+dec_frame = Frame(root)
+dec_frame.pack(pady=10)
 
-listboxEnc=Listbox(root,height=1, width=40)        
-listboxEnc.pack() 
+labelSec = Label(dec_frame, text='Enter Ciphertext:', font=(None, 12))
+labelSec.grid(row=0, column=0, padx=5, pady=5)
+
+ciphertextvalue = Entry(dec_frame, width=30)
+ciphertextvalue.grid(row=0, column=1, padx=5, pady=5)
+
+decbutton = Button(dec_frame, text="Decrypt", command=click_dec)
+decbutton.grid(row=0, column=2, padx=5, pady=5)
+
+# Output Section
+output_frame = Frame(root)
+output_frame.pack(pady=10)
+
+showResultEnc = Label(output_frame, text='Ciphertext:', font=(None, 12))
+showResultEnc.grid(row=0, column=0, padx=5, pady=5)
+
+listboxEnc = Listbox(output_frame, height=1, width=30)        
+listboxEnc.grid(row=0, column=1, padx=5, pady=5)
+
+showResultDec = Label(output_frame, text='Plaintext:', font=(None, 12))
+showResultDec.grid(row=1, column=0, padx=5, pady=5)
+
+listboxDec = Listbox(output_frame, height=1, width=30)        
+listboxDec.grid(row=1, column=1, padx=5, pady=5)
+
+root.mainloop()
 
 
-
-   #Second option: Decrytion
-
-labelSec=Label(root, text='enter ciphertext', font=(14))
-labelSec.pack(padx=10, pady=10)
-
-ciphertextvalue=Entry(root)
-ciphertextvalue.pack()
-
-decbutton=Button(root,text="Decrypt",command=click_dec)
-decbutton.pack(padx=5, pady=5)
-
-showResultDec=Label(root,text='Show Plaintext:')
-showResultDec.pack()
-
-listboxDec=Listbox(root,height=1, width=40)        
-listboxDec.pack() 
-
-
-
-
-root.mainloop() 
+#Thank you!

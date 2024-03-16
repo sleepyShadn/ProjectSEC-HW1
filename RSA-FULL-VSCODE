@@ -114,13 +114,13 @@ Mainlabel.pack(padx=20, pady=20)
    #First option: Encrytion
 
 labelOne=Label(root, text='enter plaintext', font=(14))
-labelOne.pack()
+labelOne.pack(padx=10, pady=10)
 
 plaintextvalue=Entry(root)
 plaintextvalue.pack()
 
 encbutton=Button(root,text="Encrypt",command=click_en)
-encbutton.pack()
+encbutton.pack(padx=5, pady=5)
 
 showResultEnc=Label(root,text='Show Ciphertext:')
 showResultEnc.pack()
@@ -133,13 +133,13 @@ listboxEnc.pack()
    #Second option: Decrytion
 
 labelSec=Label(root, text='enter ciphertext', font=(14))
-labelSec.pack()
+labelSec.pack(padx=10, pady=10)
 
 ciphertextvalue=Entry(root)
 ciphertextvalue.pack()
 
 decbutton=Button(root,text="Decrypt",command=click_dec)
-decbutton.pack()
+decbutton.pack(padx=5, pady=5)
 
 showResultDec=Label(root,text='Show Plaintext:')
 showResultDec.pack()

@@ -2,5 +2,20 @@
 #entering text that hasn't been encrypted into cryptographic formulas.
 
 def click_en():
-  plaintext = entryvalue.get()
+  plaintext = plaintextvalue.get()
+  zn=get_zn(2357,1733);
+  n=get_n(2357,1733);
+  e=get_e(tn);
+  d=get_d(e, tn);
+
+  print "Plaintext:",plaintext
+  print "Public Key:(",e,",",n,")"
+  print "Private Key:(",d,",",n,")"
+
+  plaintext1=string.atoi(plaintext)
+  ciphertext=rsa(plaintext1,e,n);
+
+  print 'Ciphertext: %s' % ciphertext
+  listbox.insert(0,ciphertext)
+
 

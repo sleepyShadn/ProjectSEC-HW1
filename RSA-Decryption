@@ -17,7 +17,8 @@ def click_dec():
   plaintext=rsa(ciphertext,d,n);
 
   print 'Plaintext: %s' % plaintext
-  listbox2.insert(0,plaintext)
+  listboxDec.insert(0,plaintext)
+
 
 
 

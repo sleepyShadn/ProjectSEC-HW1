@@ -16,6 +16,7 @@ def click_en():
   ciphertext=rsa(plaintext1,e,n);
 
   print 'Ciphertext: %s' % ciphertext
-  listbox.insert(0,ciphertext)
+  listboxEnc.insert(0,ciphertext)
+
 
 

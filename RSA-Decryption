@@ -2,7 +2,24 @@
 #The process  of transforming encrypted  text into its original format.
 
 def click_dec():
-  ciphertext = entryvalue2.get()
+  ciphertext = ciphertextvalue.get()
+  zn=get_zn(2357,1733);
+  n=get_n(2357,1733);
+  e=get_e(tn);
+  d=get_d(e, tn);
+
+
+  print "Ciphertext:",ciphertext
+  print "Public Key:(",e,",",n,")"
+  print "Private Key:(",d,",",n,")"
+
+  ciphertext=string.atoi(ciphertext)
+  plaintext=rsa(ciphertext,d,n);
+
+  print 'Plaintext: %s' % plaintext
+  listbox2.insert(0,plaintext)
+
+
 
 
 

@@ -1,3 +1,4 @@
 #Encryption is defind as:
 #entering text that hasn't been encrypted into cryptographic formulas.
 
+def click_en():

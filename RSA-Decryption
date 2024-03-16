@@ -2,6 +2,7 @@
 #The process  of transforming encrypted  text into its original format.
 
 def click_dec():
+  ciphertext = entryvalue2.get()
 
 
 

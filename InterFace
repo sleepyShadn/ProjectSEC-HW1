@@ -1,4 +1,4 @@
-from Tkinter import *        
+from tkinter import *        
 
 root=tk()
 root.geometry("800x500")

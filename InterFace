@@ -4,9 +4,8 @@ root=tk()
 root.geometry("800x500")
 root.title("RSA Application")
 
-Mainlabel=label(root, text="please choose", font=('Arial',18))
+Mainlabel=label(root, text="enter only numbers", font=('Arial',18))
 Mainlabel.pack(padx=20, pady=20)
-
 
 
 

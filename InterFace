@@ -1,17 +1,50 @@
-import tkinter as tk
+from Tkinter import *        
 
-root=tk.tk()
+root=tk()
 root.geometry("800x500")
 root.title("RSA Application")
 
-Mainlabel=tk.label(root, text="please choose", font=('Arial',18))
+Mainlabel=label(root, text="please choose", font=('Arial',18))
 Mainlabel.pack(padx=20, pady=20)
+
+
+
 
    #First option: Encrytion
 
-labelOne=Label(root, text='enter your plaintext', font=('Arial',16))
-labelOne.pack
+labelOne=Label(root, text='enter plaintext', font=('Arial',16))
+labelOne.pack()
 
+plaintextvalue=Entry(root)
+plaintextvalue.pack()
+
+encbutton=Button(root,text="Encrypt",command=submitclick_encrypt)
+encbutton.pack()
+
+showResultEnc=Label(root,text='Show Ciphertext:')
+showResultEnc.pack()
+
+listboxEnc=Listbox(root,height=1, width=40)        
+listboxEnc.pack() 
+
+
+
+   #Second option: Decrytion
+
+labelSec=Label(root, text='enter ciphertext', font=('Arial',16))
+labelSec.pack()
+
+ciphertextvalue=Entry(root)
+ciphertextvalue.pack()
+
+decbutton=Button(root,text="Decrypt",command=submitclick_decrypt)
+decbutton.pack()
+
+showResultDec=Label(root,text='Show Plaintext:')
+showResultDec.pack()
+
+listboxDec=Listbox(root,height=1, width=40)        
+listboxDec.pack() 
 
 
 

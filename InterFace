@@ -17,7 +17,7 @@ labelOne.pack()
 plaintextvalue=Entry(root)
 plaintextvalue.pack()
 
-encbutton=Button(root,text="Encrypt",command=submitclick_encrypt)
+encbutton=Button(root,text="Encrypt",command=click_en)
 encbutton.pack()
 
 showResultEnc=Label(root,text='Show Ciphertext:')

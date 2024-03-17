@@ -1,7 +1,6 @@
 from tkinter import *        
 import string
 
-
 #RSA steps:
   # 1-Select p and q, two prime numbers. 
   # 2-Calculate n = p*q and z(n)=(p-1)(q-1).
@@ -74,6 +73,8 @@ def click_en():
 
     print('Ciphertext: %s' % ciphertext)
     listboxEnc.insert(0, ciphertext)
+
+
 
 
   #Decryption is defind as:
